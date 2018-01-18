@@ -30,8 +30,11 @@ limitations under the License.
     
     <dubbo:registry address="zookeeper://127.0.0.1:2181" />
     
-    <!-- use dubbo protocol -->
-    <dubbo:protocol name="dubbo" />
+    <!-- use dubbo protocol to reference service -->
+    <!-- <dubbo:protocol name="dubbo" /> -->
+    
+    <!-- use netty4 protocol to reference service -->
+    <dubbo:consumer client="netty4" />
 
     <!-- generate proxy for the remote service, then demoService can be used in the same way as the
     local regular interface -->
